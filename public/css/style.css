@@ -1,0 +1,30 @@
+.center {
+	width: 80%;
+	margin: 0 auto;
+}
+.contact_form {
+	width: 50%;
+	margin: 0 auto;
+}
+form input:first-of-type {
+	margin-top: 5px;
+}
+form label {
+	display: inline;
+}
+form input {
+	border: 1px solid lightgray;
+	margin-bottom: 5px;
+	width: 85%;
+}
+form textarea {
+	width: 100%;
+}
+form input:focus, form textarea:focus {
+	border-color: lightgreen;
+}
+@media screen and (max-width: 800px) {
+	.contact_form {
+		width: 100%;
+	}
+}
