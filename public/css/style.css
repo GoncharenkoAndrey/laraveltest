@@ -2,7 +2,7 @@
 	width: 80%;
 	margin: 0 auto;
 }
-.contact_form {
+.contact_form, .login_form, .register_form {
 	width: 50%;
 	margin: 0 auto;
 }
@@ -10,12 +10,17 @@ form input:first-of-type {
 	margin-top: 5px;
 }
 form label {
-	display: inline;
+	display: inline-block;
+	min-width: 15%;
 }
 form input {
 	border: 1px solid lightgray;
 	margin-bottom: 5px;
-	width: 85%;
+	width: 80%;
+}
+form input[type="submit"] {
+	margin: 0 auto;
+	width: 50%;
 }
 form textarea {
 	width: 100%;
@@ -23,8 +28,18 @@ form textarea {
 form input:focus, form textarea:focus {
 	border-color: lightgreen;
 }
+.message a {
+	color: gray;
+}
+.message a:hover {
+	color: blue;
+}
+div .message {
+	width: 30%;
+	margin: 0 auto;
+}
 @media screen and (max-width: 800px) {
-	.contact_form {
+	.contact_form, .login_form, .register_form {
 		width: 100%;
 	}
 }

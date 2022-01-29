@@ -1,6 +1,6 @@
 @include("header")
     	<div class="center">
-        	<form class="contact_form" action="/contact" method="POST">
+        	<form class="contact_form" action="/register" method="POST">
         		@csrf
         		<fieldset>
         			<label for="name">Name:</label>
@@ -24,13 +24,10 @@
 					@enderror
         		</fieldset>
         		<fieldset>
-        			<label for="message">Message:</label>
-        			<textarea name="message"></textarea>
-        			@error("message")
-        				<div class="alert alert-danger">{{ $message }}</div>
-					@enderror
+            		<label for="password">Password:</label>
+            		<input type="password" name="password">
         		</fieldset>
-        		<input type="submit" value="Send" />
-        	</form>
-        </div>
+            	<input type="submit" value="Register" />
+            </form>
+    	</div>
 @include("footer")
