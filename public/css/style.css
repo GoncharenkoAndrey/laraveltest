@@ -1,3 +1,12 @@
+body {
+	margin: 0;
+	padding: 20px;
+	font-family: sans-serif;
+}
+* {
+	box-sizing: border-box;
+}
+
 .center {
 	width: 80%;
 	margin: 0 auto;
@@ -24,22 +33,62 @@ form input[type="submit"] {
 }
 form textarea {
 	width: 100%;
+	height: 200px;
 }
 form input:focus, form textarea:focus {
 	border-color: lightgreen;
 }
-.message a {
-	color: gray;
+.table {
+	width: 100%;
+	border-collapse: collapse;
 }
-.message a:hover {
-	color: blue;
+.table th, .table td {
+	padding: 12px 15px;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-size: 16px;
+}
+.table th {
+	background-color: darkblue;
+	color: #FFFFFF;
+}
+.table tbody tr:nth-child(even) {
+	background-color: #F5F5F5;
 }
 div .message {
 	width: 30%;
 	margin: 0 auto;
 }
-@media screen and (max-width: 800px) {
+@media(max-width: 500px) {
 	.contact_form, .login_form, .register_form {
 		width: 100%;
 	}
-}
+	.table thead {
+		display: none;
+	}
+	.table, .table tbody, .table tr, .table td {
+		display: block;
+		width: 100%;
+	}
+	.table tr {
+		margin-bottom: 15px;
+	}
+	.table td {
+		padding-left: 50px;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before {
+		content: attr(data-label);
+		position: absolute;
+		left: 0;
+		width: 50%;
+		padding-left: 15px;
+		font-size: 15px;
+		text-align: left;
+		font-weight: bold;
+	}
+	.table td:nth-of-type(3) {
+		display: none;
+	}
+} 

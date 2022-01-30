@@ -1,6 +1,6 @@
 @include("header")
     	<div class="center">
-    		<table class="message">
+    		<table class="table">
         		<thead>
         			<tr>
         				<th>
@@ -20,16 +20,16 @@
     			<tbody>
         			@foreach($messages as $message)
         			<tr>
-            			<td>
+            			<td data-label="Name: ">
             				{{$message->name}}
             			</td>
-            			<td>
+            			<td data-label="Phone: ">
             				{{$message->phone}}
             			</td>
-            			<td>
+            			<td data-label="E-Mail: ">
             				{{$message->email}}
             			</td>
-            			<td>
+            			<td data-label="Text: ">
             				{{$message->message}}
             			</td>
             		</tr>
